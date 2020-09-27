@@ -11,6 +11,7 @@ import io.ktor.client.engine.jetty.*
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
+//From this https://www.apollographql.com/docs/android/essentials/get-started-kotlin/
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
