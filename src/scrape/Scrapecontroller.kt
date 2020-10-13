@@ -8,6 +8,7 @@ class Scrapecontroller {
     fun init(){
         val doc = Jsoup.connect(url).get()
         println("Svend " + doc.body())
+        //runGraphQl()
     }
 
 
