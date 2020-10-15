@@ -8,6 +8,8 @@ class GraphQlController {
     //Looks good:
     // https://www.apollographql.com/docs/android/essentials/get-started-kotlin/
     // https://stackoverflow.com/questions/59776117/how-to-use-apollo-android-from-kotlin-but-without-android
+
+//    Endpoint: https://fireql.dev/?url=https://fakeql.com/graphql/63c186327645e3a55dee03419de4d557
     init {
         // First, create an `ApolloClient`
         // Replace the serverUrl with your GraphQL endpoint
