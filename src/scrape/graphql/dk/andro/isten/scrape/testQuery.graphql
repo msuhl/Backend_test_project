@@ -1,0 +1,6 @@
+query userOne {
+    user(id:1){
+        id
+        firstname
+    }
+}

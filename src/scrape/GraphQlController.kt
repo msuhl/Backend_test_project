@@ -2,30 +2,33 @@ package dk.andro.isten.scrape
 
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.exception.ApolloException
+import jdk.internal.jline.internal.Log
 
 class GraphQlController {
 
-    //Looks good: https://stackoverflow.com/questions/59776117/how-to-use-apollo-android-from-kotlin-but-without-android
+    //Looks good:
+    // https://www.apollographql.com/docs/android/essentials/get-started-kotlin/
+    // https://stackoverflow.com/questions/59776117/how-to-use-apollo-android-from-kotlin-but-without-android
     init {
         // First, create an `ApolloClient`
         // Replace the serverUrl with your GraphQL endpoint
         val apolloClient = ApolloClient.builder()
-            .serverUrl("https://fakeql.com/graphql/40b73b7150f7ddf63ec7b317b172f68e")
+            .serverUrl("https://fakeql.com/graphql/63c186327645e3a55dee03419de4d557")
             .build()
 
-// in your coroutine scope, call `ApolloClient.query(...).toDeferred().await()`
-
         val response = try {
-            apolloClient.query(UserOne()).toDeferred().await()
+            apolloClient.query(userOne()).toDeferred().await()
         } catch (e: ApolloException) {
-            // handle protocol errors
-            return@launch
-        }
+            print("Query catched")
 
-        val launch = response.data.launch
-        if (launch == null || response.hasErrors()) {
-            // handle application errors
-            return@launch
+            // handle protocol errors
+//            return@launch
         }
+//
+//        val launch = response.data.launch
+//        if (launch == null || response.hasErrors()) {
+//            // handle application errors
+//            return@launch
+//        }
     }
 }

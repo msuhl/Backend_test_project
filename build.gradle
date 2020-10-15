@@ -40,8 +40,9 @@ repositories {
 
 apollo {
     // instruct the compiler to generate Kotlin models
-    generateKotlinModels.set(true)
+    generateKotlinModels = true
 }
+
 dependencies {
     implementation 'org.jsoup:jsoup:1.13.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"

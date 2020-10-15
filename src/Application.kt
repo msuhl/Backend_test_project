@@ -1,5 +1,6 @@
 package dk.andro.isten
 
+import dk.andro.isten.scrape.GraphQlController
 import dk.andro.isten.scrape.Scrapecontroller
 import io.ktor.application.*
 import io.ktor.response.*
@@ -11,7 +12,6 @@ import io.ktor.client.engine.jetty.*
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
-//From this https://www.apollographql.com/docs/android/essentials/get-started-kotlin/
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
@@ -26,7 +26,7 @@ fun Application.module(testing: Boolean = false) {
 
         get("/svend") {
             val svend = "Svend"
-            Scrapecontroller().init()
+            GraphQlController()
             call.respondText("HELLO WORLD! $svend", contentType = ContentType.Text.Plain)
         }
     }

@@ -1,8 +1,0 @@
-package dk.andro.isten.scrape
-
-query UserOne() {
-        user (id: 1) {
-        id
-        firstname
-    }
-}
