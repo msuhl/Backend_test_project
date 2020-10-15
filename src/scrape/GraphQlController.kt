@@ -2,7 +2,6 @@ package dk.andro.isten.scrape
 
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.exception.ApolloException
-import jdk.internal.jline.internal.Log
 
 class GraphQlController {
 
